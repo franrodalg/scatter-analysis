@@ -1,5 +1,3 @@
-clear all;
-
 fprintf('\n**********\n');
 fprintf('STARTING SET UP');
 fprintf('\n**********\n');

@@ -1,8 +1,11 @@
-% To run this script first edit the files 'set_options.m' and
-% 'set_paths.m' in the 'aux' subfolder! 
+% To run this script first edit the files 'options.m' and
+% 'paths.m' in this same folder! 
+
+clear all;
 
 %% Set up
-
+options;
+paths;
 run(fullfile('aux/set_up.m'));
 
 %% Computation
