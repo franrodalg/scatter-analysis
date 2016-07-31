@@ -4,4 +4,4 @@ run(fullfile('aux/set_up.m'));
 
 %% Computation
 
-run(fulfile('aux/run_experiments.m'));
+run(fullfile('aux/run_experiments.m'));
