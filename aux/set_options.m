@@ -4,8 +4,7 @@
 % 'f' for filtering;
 % e.g., interventions = {'p','c','f'};
 
-interventions = {'p'};
-
+interventions = {'f', 'p'};
 
 %% Partitioning conditions to test
 % 'r' for random stratification;
@@ -13,7 +12,6 @@ interventions = {'p'};
 % e.g., interventions = {'r','f'};
 
 conditions = {'r'};
-
 
 %% Scattering audio features to extract
 % 'a' for delta-MFCC;
@@ -24,21 +22,24 @@ conditions = {'r'};
 % 'f' for Third-layer Time Scattering features;
 % e.g., feat_sets = {'a', 'b', 'c', 'd', 'e', 'f'};
 
-feat_sets = {'b'};
-
+feat_sets = {'b', 'f'};
 
 %% Use the same options as Andén and Mallat
 % 1 for using same options; 0 otherwise.
 
 literal = 1;
 
-%% Save computed audio features
+%% Save computed audio features from original excerpts
 
-save_features = 0;
+save_feats = 0;
+
+%% Save computed audio features from filtered excerpts
+
+save_feats_filtered = 0;
 
 %% Save trained classifiers
 
-save_classifiers = 0;
+save_classifiers = 1;
 
 %% Save class predictions at frame level
 
@@ -46,12 +47,28 @@ save_pred_frame = 0;
 
 %% Reuse previously computed audio features
 
-reuse_feats = 0;
+reuse_feats = 1;
 
 %% Reuse previously trained classifiers
 
-reuse_classifiers = 0;
+reuse_classifiers = 1;
 
 %% Reuse previously filtered excerpts
 
-reuse_filtered = 0;
+reuse_filtered = 1;
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% Save options in a global variable
+
+global OPTIONS;
+OPTIONS.literal = literal;
+OPTIONS.save_feats = save_feats;
+OPTIONS.save_feats_filtered = save_feats_filtered;
+OPTIONS.save_classifiers = save_classifiers;
+OPTIONS.save_pred_frame = save_pred_frame;
+OPTIONS.reuse_feats = reuse_feats;
+OPTIONS.reuse_classifiers = reuse_classifiers;
+OPTIONS.reuse_filtered = reuse_filtered;

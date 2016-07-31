@@ -1,7 +1,10 @@
+% To run this script first edit the files 'set_options.m' and
+% 'set_paths.m' in the 'aux' subfolder! 
+
 %% Set up
 
 run(fullfile('aux/set_up.m'));
 
 %% Computation
 
-run(fullfile('aux/run_experiments.m'));
+start_execution(experiments);
