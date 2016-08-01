@@ -1,4 +1,4 @@
-function [path] = get_classifier_path( intervention, condition, feat_set)
+function [path] = get_classifier_path(intervention, condition, feat_set)
 
     global PATHS;
     

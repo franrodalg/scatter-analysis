@@ -4,14 +4,14 @@
 % 'f' for filtering;
 % e.g., interventions = {'p','c','f'};
 
-interventions = {'f', 'p'};
+interventions = {'p', 'c', 'f'};
 
 %% Partitioning conditions to test
 % 'r' for random stratification;
 % 'f' for fault filtering;
 % e.g., interventions = {'r','f'};
 
-conditions = {'r'};
+conditions = {'r', 'f'};
 
 %% Scattering audio features to extract
 % 'a' for delta-MFCC;
@@ -22,7 +22,7 @@ conditions = {'r'};
 % 'f' for Third-layer Time Scattering features;
 % e.g., feat_sets = {'a', 'b', 'c', 'd', 'e', 'f'};
 
-feat_sets = {'b', 'f'};
+feat_sets = {'b'};
 
 %% Use the same options as Andén and Mallat
 % 1 for using same options; 0 otherwise.
@@ -31,11 +31,11 @@ literal = 1;
 
 %% Save computed audio features from original excerpts
 
-save_feats = 0;
+save_feats = 1;
 
 %% Save computed audio features from filtered excerpts
 
-save_feats_filtered = 0;
+save_feats_filtered = 1;
 
 %% Save trained classifiers
 
@@ -43,7 +43,7 @@ save_classifiers = 1;
 
 %% Save class predictions at frame level
 
-save_pred_frame = 0;
+save_pred_frame = 1;
 
 %% Reuse previously computed audio features
 

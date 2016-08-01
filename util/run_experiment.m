@@ -9,24 +9,30 @@ function [] = run_experiment(intervention, condition, feat_set)
         FEAT_SETS.(feat_set) , ' Audio Features']);
     fprintf('\n');
     
-    display('Obtiaining classifier...');
-    classifier = get_classifier(...
+    display('Obtaining audio features...')
+    [features, indices, objects] = get_features(...
         intervention, condition, feat_set, OPTIONS);
+    display('Features obtained!');
+    fprintf('\n');
+    
+    display('Obtaining classifier...');
+    classifier = get_classifier(features, indices, objects,...
+        intervention, condition, OPTIONS);
     display('Classifier obtained!');
     fprintf('\n');
     
-    display('Computing predictions...');
-    [pred, pred_frame] = ...
-        predict(classifier, intervention, condition, feat_set, OPTIONS);
-    display('Predictions computed!');
+    display('Testing classifier...');
+    [pred, pred_frame] = compute_predictions(classifier, features, ...
+        indices, intervention, condition);
+    display('Classifier tested!');
     fprintf('\n');
     
     display('Saving predictions...');
-    save_predictions(pred, intervention, condition, feat_set);
+    save_predictions(pred, intervention, condition, feat_set, 'excerpts');
     
     if(OPTIONS.save_pred_frame)
         save_predictions(...
-            pred_frame, intervention, condition, feat_set, 'frame');
+            pred_frame, intervention, condition, feat_set, 'frames');
     end
     display('Predictions saved!');
     fprintf('\n');

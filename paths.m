@@ -30,7 +30,7 @@ gtzan_path = [pwd, '/../aux_folders/excerpts/gtzan/'];
 % e.g., gtzan_filt_path = [pwd, '/../datasets/gtzan_filt/'];
 % Only mandatory if filtering intervention is to be run.
 % If the folder does not exist, the script will create it.
-gtzan_filt_path = '';
+gtzan_filt_path = [pwd, '/../aux_folders/datasets/gtzan_filt/'];
 
 
 %% Intermediate computations
@@ -40,7 +40,7 @@ gtzan_filt_path = '';
 % Only mandatory if 'int_features' option enabled.
 % If the folder does not exist, the script will create it.
 
-feats_path = '';
+feats_path = [pwd, '/../aux_folders/feats/gtzan/'];
 
 
 % Path to filtered GTZAN recordings audio features
@@ -49,7 +49,7 @@ feats_path = '';
 % and filtering intervention is to be run.
 % If the folder does not exist, the script will create it.
 
-feats_filt_path = '';
+feats_filt_path = feats_path = [pwd, '/../aux_folders/feats/gtzan_filt/'];
 
 
 % Path to previously stored classifiers or where to store
@@ -76,4 +76,4 @@ pred_excerpts_path = [pwd, '/../aux_folders/results/excerpts/'];
 % Only mandatory if 'save_pred_frames' option is enabled
 % If the folder does not exist, the script will create it.
 
-pred_frames_path = '';
+pred_frames_path = [pwd, '/../aux_folders/results/frames/'];

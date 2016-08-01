@@ -6,7 +6,7 @@ clear all;
 %% Set up
 options;
 paths;
-run(fullfile('aux/set_up.m'));
+run(fullfile('util/set_up.m'));
 
 %% Computation
 

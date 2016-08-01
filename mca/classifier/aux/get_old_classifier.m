@@ -6,6 +6,5 @@ function [classifier] = ...
     classifier = load(path);
     classifier = classifier.classifier;
 
-
 end
 

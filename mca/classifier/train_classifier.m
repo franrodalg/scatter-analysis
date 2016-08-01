@@ -1,7 +1,16 @@
 function [classifier] = train_classifier(...
-    intervention, condition, feat_set, options)
+    features, indices, objects, intervention, condition, ...
+    feat_set, options)
 
-    classifier = [];
+    [train_set, ~] = get_folds(condition);
+    
+    if(strcmp(intervention, 'c'))
+        classifier = get_bdt_classifier(features, ...
+            indices, train_set, feat_set, options);
+    else
+        classifier = get_svm_classifier(features, ...
+            indices, objects, train_set);
+    end
 
 end
 
