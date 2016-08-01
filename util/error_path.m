@@ -8,6 +8,6 @@ function [] = error_path(folder, path)
     end
     
     
-    error([msg, ' Please define it correctly in set_paths.m']);
+    error([msg, ' Please define it correctly in paths.m']);
 end
 
