@@ -32,3 +32,15 @@ Both libraries can be obtained in: http://www.di.ens.fr/data/software/
 It also requires the GTZAN music dataset, available at:
 http://opihi.cs.uvic.ca/sound/genres.tar.gz
 
+To execute the experiments, first edit the files paths.m and options.m with the
+paths to the folders in your own system and the required execution options,
+respectively. Then, run the script scatter_analysis.m in Matlab or scatter_analysis.sh
+in a Unix terminal.
+
+* WARNING
+
+At the moment of releasing this code, ScatNet library still uses AUREAD and/or WAVREAD
+functions to read audio files, which are not supported in the most recent versions of Matlab.
+This means it might be necessary to use an old version of Matlab to run our code
+(for instance, Matlab2014a). Another option would be to edit ScatNet feature extractor
+replacing the probematic calls with AUDIOREAD.
