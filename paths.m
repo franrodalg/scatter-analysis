@@ -49,7 +49,7 @@ feats_path = [pwd, '/../aux_folders/feats/gtzan/'];
 % and filtering intervention is to be run.
 % If the folder does not exist, the script will create it.
 
-feats_filt_path = feats_path = [pwd, '/../aux_folders/feats/gtzan_filt/'];
+feats_filt_path = [pwd, '/../aux_folders/feats/gtzan_filt/'];
 
 
 % Path to previously stored classifiers or where to store
