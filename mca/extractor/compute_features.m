@@ -4,7 +4,7 @@ function [features, indices] = compute_features(feat_set, src)
  
   % set the appropriate options for the particular feature set
 
-  ex_options = set_options(feat_set);
+  ex_options = set_extractor_options(feat_set);
 
   % extract features using the computed options
 
