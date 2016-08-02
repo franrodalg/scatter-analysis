@@ -51,11 +51,13 @@ for ii=1:length(categories)
     excerpt_path = [category_folder '/' filename];
     [x, fs] = audioread(excerpt_path);
     
-    [N, Wn] = buttord(40/(Fs/2), 20/(Fs/2), 1, 30);
+    [N, Wn] = buttord(40/(fs/2), 20/(fs/2), 1, 30);
     [B_high, A_high] = butter(N, Wn, 'high');
     y = filter(B_high, A_high, x);
     
-    path = [filtered_folder '/' category '/' filename];
+    [~, filename, ~] = fileparts(filename);
+    
+    path = [filtered_folder category '/' filename '.wav'];
     audiowrite(path, y, fs);
   end
   
