@@ -15,7 +15,7 @@ function [ classifier ] = get_bdt_classifier(features, indices,...
 
     %%% 3.- Train set indices
 
-    train_ind = indices{train_set};
+    train_ind = [indices{train_set}];
 
     %%% 4.- Train set eatures
 
@@ -23,7 +23,7 @@ function [ classifier ] = get_bdt_classifier(features, indices,...
 
     %%% 5.- Train set ground truth
 
-    train_labels = kron(labels(train_set), ones(num_frames, 1));
+    train_labels = kron(labels(train_set), ones(num_frames, 1)');
 
     %%% 6.- Train model
 
