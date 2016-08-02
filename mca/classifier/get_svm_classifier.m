@@ -16,7 +16,7 @@ function [ classifier ] = get_svm_classifier( ...
     [svm_options.C, svm_options.gamma] = get_svm_parameters(...
         aux, train_set, svm_options);
     
-    model = svm_train(db, train_set, svm_options);
+    model = svm_train(aux, train_set, svm_options);
     
     classifier.kernel = aux.kernel;
     classifier.model = model;
