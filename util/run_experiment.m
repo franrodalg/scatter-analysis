@@ -17,7 +17,7 @@ function [] = run_experiment(intervention, condition, feat_set)
     
     display('Obtaining classifier...');
     classifier = get_classifier(features, indices, objects,...
-        intervention, condition, OPTIONS);
+        intervention, condition, feat_set, OPTIONS);
     display('Classifier obtained!');
     fprintf('\n');
     
