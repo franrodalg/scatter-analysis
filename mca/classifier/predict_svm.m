@@ -1,9 +1,9 @@
 function [pred_frame] = predict_svm(classifier,...
     features, indices, test_set)
 
-    model = classifier.model;
+    model = classifier.model.svm;
     num_classes = model.nr_class;
-    full_test_kernel = model.svm_options.full_test_kernel;
+    full_test_kernel = classifier.model.full_test_kernel;
     
     test_feats = features(:, indices{test_set});
     
