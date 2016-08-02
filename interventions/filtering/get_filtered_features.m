@@ -17,6 +17,6 @@ function [features, indices] = get_filtered_features(...
       [features, indices] = compute_features(feat_set, src);
       if(options.save_feats_filtered)
           save_features(features, indices, objects,...
-            condition, feat_set);
+            feat_set, 'filtered');
       end
     end
