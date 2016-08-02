@@ -7,7 +7,7 @@ function[pred_frame] = predict_bdt(classifier, features, indices,...
 
     %%% 2.- Test set indices
 
-    test_ind = indices{test_set};
+    test_ind = [indices{test_set}];
 
     %%% 3.- Test set features
 
