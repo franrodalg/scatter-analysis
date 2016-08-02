@@ -49,7 +49,7 @@ end
 
 %% GTZAN features
 
-if(save_feats)
+if(save_feats || reuse_feats)
     if isequal(feats_path, '')
         error_path('Audio features');
     elseif ~exist(feats_path, 'dir')
@@ -86,6 +86,27 @@ if(ismember('f', conditions) && save_feats_filtered)
     end
 end
 
+%% Classifiers
+
+if(save_classifiers || reuse_classifiers)
+    if isequal(classifiers_path, '')
+        error_path('Classifiers');
+    elseif ~exist(classifiers_path, 'dir')
+        [s, mess, messid] = mkdir(classifiers_path);
+        if(s)
+            display('Classifiers folder created.');
+        else
+            error(['Classifiers folder could not be created ' ...
+                'in the requested location. ' ...
+                'Please select an available one and edit paths.m.'])
+        end
+    else
+        display('Classifiers folder found.');
+    end
+end
+
+
+
 %% Results
 
 if isequal(pred_excerpts_path, '')
@@ -99,4 +120,23 @@ elseif ~exist(pred_excerpts_path, 'dir')
     end
 else
     display('Results folder found.');
+end
+
+%% Results frame level
+
+if(pred_frames_path)
+    if isequal(pred_frames_path, '')
+        error_path('Results at frame level');
+    elseif ~exist(pred_frames_path, 'dir')
+        [s, mess, messid] = mkdir(pred_frames_path);
+        if(s)
+            display('Results at frame level folder created.');
+        else
+            error(['Results at frame level folder could not be created ' ...
+                'in the requested location. ' ...
+                'Please select an available one and edit paths.m.'])
+        end
+    else
+        display('Results at frame level folder found.');
+    end
 end

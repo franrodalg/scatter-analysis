@@ -3,9 +3,10 @@ function [pred_frame] = predict_svm(classifier,...
 
     model = classifier.model.svm;
     num_classes = model.nr_class;
+    kernel = classifier.kernel;
     full_test_kernel = classifier.model.full_test_kernel;
     
-    test_feats = features(:, indices{test_set});
+    test_feats = features(:, [indices{test_set}]);
     
     sv_coef = zeros(model.totalSV, ...
         num_classes*(num_classes-1)/2, ...
