@@ -28,8 +28,46 @@ else
     display('GTZAN dataset folder found.');
 end
 
+%% GTZAN filtered
+
+if(ismember('f', conditions))
+    if isequal(gtzan_filt_path, '')
+        error_path('GTZAN Filtered');
+    elseif ~exist(gtzan_path, 'dir')
+        [s, mess, messid] = mkdir(gtzan_filt_path);
+        if(s)
+            display('GTZAN filtered dataset folder created.');
+        else
+            error(['GTZAN filtered folder could not be created ' ...
+                'in the requested location. ' ...
+                'Please select an available one and edit paths.m.'])
+        end
+    else
+        display('GTZAN filtered dataset folder found.');
+    end
+end
+
+%% GTZAN features
+
+if(save_feats)
+    if isequal(feats_path, '')
+        error_path('Audio features');
+    elseif ~exist(feats_path, 'dir')
+        [s, mess, messid] = mkdir(feats_path);
+        if(s)
+            display('GTZAN audio features folder created.');
+        else
+            error(['GTZAN audio features folder could not be created ' ...
+                'in the requested location. ' ...
+                'Please select an available one and edit paths.m.'])
+        end
+    else
+        display('GTZAN audio features folder found.');
+    end
+end
 
 %% Results
+
 if isequal(pred_excerpts_path, '')
     error_path('Results');
 elseif ~exist(pred_excerpts_path, 'dir')

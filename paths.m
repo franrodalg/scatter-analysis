@@ -37,7 +37,7 @@ gtzan_filt_path = [pwd, '/../aux_folders/datasets/gtzan_filt/'];
 
 % Path to original GTZAN recordings audio features,
 % e.g., feats_path = [pwd, '/../intermediate/features/gtzan/'];
-% Only mandatory if 'int_features' option enabled.
+% Only mandatory if 'save_features' option enabled.
 % If the folder does not exist, the script will create it.
 
 feats_path = [pwd, '/../aux_folders/feats/gtzan/'];
