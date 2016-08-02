@@ -9,7 +9,7 @@ function [ features, indices, objects ] = ...
     %2.- Get filtered features
         
         [features_filt, indices_filt, ~] = get_filtered_features(...
-            condition, feat_set, options);
+            feat_set, options);
 
     %3.- Join features
 
