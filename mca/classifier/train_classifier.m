@@ -6,10 +6,10 @@ function [classifier] = train_classifier(...
     
     if(strcmp(intervention, 'c'))
         classifier = get_bdt_classifier(features, ...
-            indices, train_set, feat_set, options);
+            indices, objects, train_set);
     else
         classifier = get_svm_classifier(features, ...
-            indices, objects, train_set);
+            indices, objects, train_set, feat_set, options);
     end
 
 end

@@ -1,5 +1,5 @@
 function [ classifier ] = get_svm_classifier( ...
-    features, indices, train_set, feat_set, options)
+    features, indices, objects, train_set, feat_set, options)
 
     classifier.type = 'svm';
     
