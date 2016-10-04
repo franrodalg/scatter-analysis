@@ -2,6 +2,10 @@ interventions_allowed = {'p', 'c', 'f'};
 interventions = check_option(...
     'Intervention Experiments', interventions, interventions_allowed);
 
+filter_types_allowed = {'bw', 'fb'}
+filter_type = check_option(...
+    'Filter Types', filter_type, filter_types_allowed);
+
 conditions_allowed = {'r', 'f'};
 conditions = check_option(...
     'Partitioning Conditions', conditions, conditions_allowed);
