@@ -12,14 +12,14 @@ function [extractor] = get_extractor(feat_set, N, ex_options)
         format_scat(log_scat(...
           spec_freq_average(x, filters, ex_options.sc1_opt)))))};
             
-    case {'b', 'c', 'd'}
+    case {'b', 'c', 'f'}
       
       Wop = wavelet_factory_1d(N, ex_options.filt1_opt,...
         ex_options.sc1_opt);
       extractor = {@(x)(format_scat(log_scat(...
         renorm_scat(scat(x, Wop)))))};
 
-    case {'e', 'f'}
+    case {'f', 'e'}
 
       Wop1 = wavelet_factory_1d(N, ex_options.filt1_opt, ex_options.sc1_opt);      
       fWop1 = wavelet_factory_1d(...
