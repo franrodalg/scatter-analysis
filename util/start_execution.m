@@ -4,7 +4,8 @@ function [] = start_execution(experiments)
     fprintf('STARTING EXECUTION OF EXPERIMENTS');
     fprintf('\n**********\n');
 
-    num_experiments = length(experiments);
+    num_experiments = size(experiments);
+    num_experiments = num_experiments(1);
     
     for ii = 1:num_experiments
         
