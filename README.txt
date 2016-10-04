@@ -1,6 +1,6 @@
 Analysis of Scattering-Based MCA Systems
-Version 0.0.1
-July 2016
+Version 0.0.2
+August 2016
 
 Contact: Francisco Rodríguez-Algarra (f.rodriguezalgarra@qmul.ac.uk)
 
@@ -21,6 +21,17 @@ F. Rodríguez-Algarra, B. L. Sturm, and H. Maruri-Aguilar,
 "Analysing Scattering-Based Music Content Analysis Systems: Where's the Music?",
 in Proc. 17th International Society of Music Information Retrieval Conference (ISMIR'16),
 New York, NY, USA, Aug. 2016.
+
+* CHANGELOG
+
+Version 0.0.2
+
+- Fixed bugs:
+  - Correct number of arguments in get_filt_features call
+  - Number of experiments to run correctly calculated
+  - Feature sets 'd' and 'f' swaped in get_extractor
+
+- New option: filtering intervention with filterbank
 
 * USAGE
 
