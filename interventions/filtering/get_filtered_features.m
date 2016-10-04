@@ -9,7 +9,7 @@ function [features, indices] = get_filtered_features(...
       
       if(~options.reuse_filtered || ...
               ~check_src('filtered'))
-          filter_src();
+          filter_src(options.filter_type);
       end
       src = get_src('filtered');
       objects = src.objects;
