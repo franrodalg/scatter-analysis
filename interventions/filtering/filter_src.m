@@ -1,4 +1,10 @@
-function [] = filter_src()
+function [] = filter_src(filter_type)
+
+if(nargin < 1)
+  filter_type = 'bw';
+else
+  filter_type = 'fb';
+end
 
 global PATHS;
 
@@ -51,9 +57,13 @@ for ii=1:length(categories)
     excerpt_path = [category_folder '/' filename];
     [x, fs] = audioread(excerpt_path);
     
-    [N, Wn] = buttord(40/(fs/2), 20/(fs/2), 1, 30);
-    [B_high, A_high] = butter(N, Wn, 'high');
-    y = filter(B_high, A_high, x);
+    if(strcmp(filter_type, 'bw'))
+      y = filter_bw(x, fs);
+    else if(strcmp(filter_type, 'fb'))
+      y = filter_fb(x, fs);
+    else
+      error('Unknown filter type');
+    end
     
     [~, filename, ~] = fileparts(filename);
     

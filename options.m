@@ -6,6 +6,14 @@
 
 interventions = {'p', 'c', 'f'};
 
+%% Filter type in Filtering Intervention
+% 'bw' for Butterworth (used in ISMIR 2016)
+% 'fb' for IRR Filterbank
+% e.g., filter_type = 'bw';
+
+filter_type = 'fb';
+
+
 %% Partitioning conditions to test
 % 'r' for random stratification;
 % 'f' for fault filtering;
