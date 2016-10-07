@@ -89,23 +89,49 @@ end
 %% Classifiers
 
 if(save_classifiers || reuse_classifiers)
-    if isequal(classifiers_path, '')
-        error_path('Classifiers');
-    elseif ~exist(classifiers_path, 'dir')
-        [s, mess, messid] = mkdir(classifiers_path);
-        if(s)
-            display('Classifiers folder created.');
-        else
-            error(['Classifiers folder could not be created ' ...
-                'in the requested location. ' ...
-                'Please select an available one and edit paths.m.'])
-        end
+
+  if isequal(classifiers_path, '')
+    error_path('Classifiers');
+  elseif ~exist(classifiers_path, 'dir')
+    [s, mess, messid] = mkdir(classifiers_path);
+    if(s)
+      display('Classifiers folder created.');
     else
-        display('Classifiers folder found.');
+      error(['Classifiers folder could not be created ' ...
+        'in the requested location. ' ...
+        'Please select an available one and edit paths.m.'])
     end
+  else
+    display('Classifiers folder found.');
+  end
+
+  if ~exist([classifiers_path , 'svm/'], 'dir')
+    [s, mess, messid] = mkdir([classifiers_path, 'svm/']);
+    if(s)
+      display('SVM Classifiers folder created.');
+    else
+      error(['SVM Classifiers folder could not be created ' ...
+        'in the requested location. ' ...
+        'Please select an available one and edit paths.m.'])
+    end
+  else
+    display('SVM Classifiers folder found.');
+  end
+
+  if (~exist([classifiers_path , 'bdt/'], 'dir') && ...
+      (ismember('c', interventions)))
+    [s, mess, messid] = mkdir([classifiers_path, 'bdt/']);
+    if(s)
+      display('BDT Classifiers folder created.');
+    else
+      error(['BDT Classifiers folder could not be created ' ...
+       'in the requested location. ' ...
+       'Please select an available one and edit paths.m.'])
+    end
+  else
+    display('BDT Classifiers folder found.');
+  end
 end
-
-
 
 %% Results
 

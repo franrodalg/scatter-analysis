@@ -28,7 +28,19 @@ end
 
 for ii=1:length(categories)
   
-  category = categories(ii).name;  
+  category = categories(ii).name;
+
+  if (~exist([filtered_folder '/' category], 'dir'))
+    [s, mess, messid] = mkdir([filtered_folder '/' category]);
+    if(s)
+      display([category ' folder created.']);
+    else
+      error([category ' folder could not be created ' ...
+             'in the requested location.'])
+    end
+  else
+    display([category ' folder found.']);
+  end
     
   fprintf('Filtering %s files.\n', category);
     
@@ -57,7 +69,7 @@ for ii=1:length(categories)
     
     if(strcmp(filter_type, 'bw'))
       y = filter_bw(x, fs);
-    else if(strcmp(filter_type, 'fb'))
+    elseif(strcmp(filter_type, 'fb'))
       y = filter_fb(x, fs);
     else
       error('Unknown filter type');
