@@ -2,8 +2,6 @@ function [] = filter_src(filter_type)
 
 if(nargin < 1)
   filter_type = 'bw';
-else
-  filter_type = 'fb';
 end
 
 global PATHS;
