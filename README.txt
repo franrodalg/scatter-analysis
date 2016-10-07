@@ -1,6 +1,6 @@
 Analysis of Scattering-Based MCA Systems
-Version 0.0.2
-August 2016
+Version 0.0.3
+October 2016
 
 Contact: Francisco Rodríguez-Algarra (f.rodriguezalgarra@qmul.ac.uk)
 
@@ -23,6 +23,12 @@ in Proc. 17th International Society of Music Information Retrieval Conference (I
 New York, NY, USA, Aug. 2016.
 
 * CHANGELOG
+
+Version 0.0.3
+
+- Fixed bugs:
+ - Automatic creation of folders
+ - Selection of filter type
 
 Version 0.0.2
 
