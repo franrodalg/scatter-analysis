@@ -8,7 +8,7 @@ function [options] = set_classifier_options(feat_set, literal)
   % This causes the accuracy to be lower than it could!
   if(literal)
     switch(feat_set)
-      case('f3')
+      case('f')
         options.full_test_kernel = 0;
       otherwise 
         options.full_test_kernel = 1;
