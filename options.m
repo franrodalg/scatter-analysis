@@ -32,8 +32,9 @@ conditions = {'r', 'f'};
 
 feat_sets = {'b'};
 
-%% Use the same options as Andén and Mallat
+%% Use the same options as AndŽn and Mallat
 % 1 for using same options; 0 otherwise.
+% CURRENTLY NOT IN USE!
 
 literal = 1;
 
