@@ -10,7 +10,7 @@ function [options] = set_classifier_options(feat_set, literal)
     switch(feat_set)
       case('f')
         %options.full_test_kernel = 0;
-        options.full_test_kernel = 0;
+        options.full_test_kernel = 1;
       otherwise 
         options.full_test_kernel = 1;
     end
