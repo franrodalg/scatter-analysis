@@ -37,10 +37,13 @@ function [] = run_experiment(intervention, condition, feat_set)
     display('Predictions saved!');
     fprintf('\n');
     
-    [~, test_gt] = get_gt(condition);
-    acc = (sum(test_gt == pred)/length(pred)) * 100;
-    fprintf('Mean classification accuracy: %0.2f%%\n', acc);
+    %% FoM Computation
     
+    [~, test_gt] = get_gt(condition);
+    
+    fom = get_fom(test_gt, pred);
+    norm_acc = fom(end) * 100;
+    fprintf('Normalised accuracy (Mean Recall): %0.2f%%\n', norm_acc);
     
 end
 
