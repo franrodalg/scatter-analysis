@@ -61,12 +61,12 @@ for ii=1:length(categories)
   
   for jj = 1:length(excerpts)
   
-    fprintf('File %d of %d.\n', jj, length(excerpts));
+    fprintf('%s: File %d of %d.\n', category, jj, length(excerpts));
   
     filename =  excerpts(jj).name;
     excerpt_path = [category_folder '/' filename];
     [x, fs] = audioread(excerpt_path);
-    
+
     if(strcmp(filter_type, 'bw'))
       y = filter_bw(x, fs);
     elseif(strcmp(filter_type, 'fb'))
@@ -74,11 +74,12 @@ for ii=1:length(categories)
     else
       error('Unknown filter type');
     end
-    
+
     [~, filename, ~] = fileparts(filename);
     
     path = [filtered_folder category '/' filename '.wav'];
     audiowrite(path, y, fs);
+
   end
   
 end

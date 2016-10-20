@@ -19,7 +19,7 @@ function [extractor] = get_extractor(feat_set, N, ex_options)
       extractor = {@(x)(format_scat(log_scat(...
         renorm_scat(scat(x, Wop)))))};
 
-    case {'f', 'e'}
+    case {'d', 'e'}
 
       Wop1 = wavelet_factory_1d(N, ex_options.filt1_opt, ex_options.sc1_opt);      
       fWop1 = wavelet_factory_1d(...
