@@ -37,6 +37,10 @@ function [] = run_experiment(intervention, condition, feat_set)
     display('Predictions saved!');
     fprintf('\n');
     
+    [~, test_gt] = get_gt(condition);
+    acc = (sum(test_gt == pred)/length(pred)) * 100;
+    fprintf('Mean classification accuracy: %0.2f%%\n', acc);
+    
     
 end
 
