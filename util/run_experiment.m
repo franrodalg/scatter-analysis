@@ -1,4 +1,4 @@
-function [] = run_experiment(intervention, condition, feat_set)
+function [norm_acc] = run_experiment(intervention, condition, feat_set)
 
     global INTERVENTIONS CONDITIONS FEAT_SETS;
     global OPTIONS;
