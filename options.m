@@ -11,7 +11,7 @@ interventions = {'p', 'c', 'f'};
 % 'fb' for IRR Filterbank
 % e.g., filter_type = 'bw';
 
-filter_type = 'fb';
+filter_type = 'bw';
 
 
 %% Partitioning conditions to test
@@ -30,9 +30,9 @@ conditions = {'r', 'f'};
 % 'f' for Third-layer Time Scattering features;
 % e.g., feat_sets = {'a', 'b', 'c', 'd', 'e', 'f'};
 
-feat_sets = {'b'};
+feat_sets = {'a', 'b', 'c', 'd', 'e', 'f'};
 
-%% Use the same options as Andén and Mallat
+%% Use the same options as Anden and Mallat
 % 1 for using same options; 0 otherwise.
 % CURRENTLY NOT IN USE!
 
