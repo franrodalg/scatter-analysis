@@ -6,4 +6,4 @@ run([scatnet_path, 'addpath_scatnet.m']);
 addpath([libsvm_path, 'matlab']);
 
 mfilepath=fileparts(which(mfilename));
-addpath(genpath(fullfile(mfilepath,'/../')));
+addpath(genpath(fullfile(mfilepath,'/../../')));
