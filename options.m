@@ -54,6 +54,10 @@ save_classifiers = 1;
 
 save_pred_frame = 1;
 
+%% Save computed FoM
+
+save_foms = 1;
+
 %% Reuse previously computed audio features
 
 reuse_feats = 1;
@@ -65,7 +69,6 @@ reuse_classifiers = 1;
 %% Reuse previously filtered excerpts
 
 reuse_filtered = 1;
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

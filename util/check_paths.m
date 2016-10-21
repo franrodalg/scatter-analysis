@@ -166,3 +166,22 @@ if(pred_frames_path)
         display('Results at frame level folder found.');
     end
 end
+
+%% FoM
+
+if(save_foms)
+    if isequal(foms_path, '')
+        error_path('Computed FoMs');
+    elseif ~exist(foms_path, 'dir')
+        [s, mess, messid] = mkdir(foms_path);
+        if(s)
+            display('Computed FoMs folder created.');
+        else
+            error(['Computed FoMs folder could not be created ' ...
+                'in the requested location. ' ...
+                'Please select an available one and edit paths.m.'])
+        end
+    else
+        display('Computed FoMs folder found.');
+    end
+end

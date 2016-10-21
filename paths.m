@@ -76,7 +76,15 @@ pred_excerpts_path = '';
 
 % Folder to store frame-based prediction results,
 % e.g., pred_excerpts_path = [pwd, '/../results/pred_frames'];
-% Only mandatory if 'save_pred_frames' option is enabled
+% Only mandatory if 'save_pred_frame' option is enabled
 % If the folder does not exist, the script will create it.
 
 pred_frames_path = '';
+
+
+% Folder to store computed FoM,
+% e.g., foms_path = [pwd, '/../results/foms'];
+% Only mandatory if 'save_foms' option is enabled
+% If the folder does not exist, the script will create it.
+
+foms_path = '';
