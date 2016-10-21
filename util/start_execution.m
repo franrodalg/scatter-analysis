@@ -7,6 +7,8 @@ function [] = start_execution(experiments)
     num_experiments = size(experiments);
     num_experiments = num_experiments(1);
     
+    norm_accs = zeros(1, num_experiments);
+    
     for ii = 1:num_experiments
         
       fprintf('\n**********\n');

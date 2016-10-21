@@ -1,12 +1,8 @@
 function [norm_acc] = run_experiment(intervention, condition, feat_set)
 
-    global INTERVENTIONS CONDITIONS FEAT_SETS;
     global OPTIONS;
     
-    display(['INTERVENTION: ', INTERVENTIONS.(intervention)]);
-    display(['PARTITIONING CONDITION: ', CONDITIONS.(condition)]);
-    display(['FEATURE SET: (', feat_set, ') ',...
-        FEAT_SETS.(feat_set) , ' Audio Features']);
+    show_experiment(intervention, condition, feat_set);
     fprintf('\n');
     
     display('Obtaining audio features...')
