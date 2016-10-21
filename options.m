@@ -6,12 +6,12 @@
 
 interventions = {'p', 'c', 'f'};
 
-%% Filter type in Filtering Intervention
+%% Filter types in Filtering Interventions
 % 'bw' for Butterworth (used in ISMIR 2016)
-% 'fb' for IRR Filterbank
-% e.g., filter_type = 'bw';
+% 'fb' for IIR Filterbank
+% e.g., filter_types = {'bw', 'fb'};
 
-filter_type = 'bw';
+filter_types = {'bw'};
 
 
 %% Partitioning conditions to test

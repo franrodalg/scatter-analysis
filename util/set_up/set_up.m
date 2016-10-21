@@ -31,8 +31,13 @@ fprintf('\n**********\n');
 fprintf('Defining execution order');
 fprintf('\n**********\n');
 
-experiments = define_execution(...
+if (any(ismember(interventions, 'f')))
+  experiments = define_execution(...
     interventions, conditions, feat_sets);
+else
+  experiments = define_execution(...
+    interventions, conditions, feat_sets, filter_types);
+end
 
 
 %%

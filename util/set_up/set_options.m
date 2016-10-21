@@ -10,4 +10,3 @@ OPTIONS.save_foms = save_foms;
 OPTIONS.reuse_feats = reuse_feats;
 OPTIONS.reuse_classifiers = reuse_classifiers;
 OPTIONS.reuse_filtered = reuse_filtered;
-OPTIONS.filter_type = filter_type;

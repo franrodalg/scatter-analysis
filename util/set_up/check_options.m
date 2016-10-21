@@ -2,9 +2,15 @@ interventions_allowed = {'p', 'c', 'f'};
 interventions = check_option(...
     'Intervention Experiments', interventions, interventions_allowed);
 
-filter_types_allowed = {'bw', 'fb'};
-filter_type = check_option(...
-    'Filter Types', filter_type, filter_types_allowed);
+if (any(ismember(interventions, 'f')))
+  if(~exist('filter_type') || isempty(filter_type))
+    filter_types = {'bw'};
+  else
+    filter_types_allowed = {'bw', 'fb'};
+    filter_types = check_option(...
+      'Filter Types', filter_types, filter_types_allowed);
+  end
+end
 
 conditions_allowed = {'r', 'f'};
 conditions = check_option(...
