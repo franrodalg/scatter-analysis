@@ -3,6 +3,10 @@ INTERVENTIONS.p = 'Partitioning';
 INTERVENTIONS.c = 'Classifier';
 INTERVENTIONS.f = 'Filtering';
 
+global FILTER_TYPES;
+FILTER_TYPES.bw = 'Butterworth';
+FILTER_TYPES.fb = 'Filterbank';
+
 global CONDITIONS;
 CONDITIONS.r = 'Random Stratification';
 CONDITIONS.f = 'Fault-filtering';

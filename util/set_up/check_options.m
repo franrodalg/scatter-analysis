@@ -3,7 +3,7 @@ interventions = check_option(...
     'Intervention Experiments', interventions, interventions_allowed);
 
 if (any(ismember(interventions, 'f')))
-  if(~exist('filter_type') || isempty(filter_type))
+  if(~exist('filter_types') || isempty(filter_types))
     filter_types = {'bw'};
   else
     filter_types_allowed = {'bw', 'fb'};
