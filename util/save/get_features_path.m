@@ -8,7 +8,7 @@ function [path] = get_features_path(feat_set, version, filter_type)
     end
     
     filename = [feat_set, '.mat'];
-    path = [folder,'/', filename];
+    path = [folder '/' filename];
 
 end
 
