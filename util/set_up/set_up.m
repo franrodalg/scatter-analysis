@@ -39,7 +39,6 @@ else
     interventions, conditions, feat_sets);
 end
 
-experiments
 %%
 
 fprintf('\n**********\n');

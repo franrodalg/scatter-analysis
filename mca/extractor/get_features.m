@@ -1,5 +1,5 @@
 function [ features, indices, objects ] = ...
-    get_features(intervention, condition, feat_set, options)
+    get_features(intervention, condition, feat_set, filter_type, options)
 
     %1.- Get original features
 
@@ -9,7 +9,7 @@ function [ features, indices, objects ] = ...
     %2.- Get filtered features
         
         [features_filt, indices_filt] = get_filtered_features(...
-            feat_set, options);
+            feat_set, filter_type, options);
 
     %3.- Join features
 

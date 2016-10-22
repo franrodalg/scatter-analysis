@@ -1,7 +1,8 @@
 function [ ] = save_predictions(preds, intervention, condition, ...
-    feat_set, mode)
+    feat_set, mode, filter_type)
 
-    path = get_predictions_path(intervention, condition, feat_set, mode);
+    path = get_predictions_path(...
+        intervention, condition, feat_set, mode, filter_type);
     save(path, 'preds');
 
 

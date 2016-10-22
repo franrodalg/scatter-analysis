@@ -6,7 +6,7 @@ end
 
 global PATHS;
 
-filtered_folder = PATHS.gtzan_filt;
+filtered_folder = [PATHS.gtzan_filt '/' filter_type];
 dataset_folder = PATHS.gtzan;
 
 categories = dir(dataset_folder);
@@ -31,7 +31,7 @@ for ii=1:length(categories)
   category = categories(ii).name;
 
   if (~exist([filtered_folder '/' category], 'dir'))
-    [s, mess, messid] = mkdir([filtered_folder '/' category]);
+    [s, ~, ~] = mkdir([filtered_folder '/' category]);
     if(s)
       display([category ' folder created.']);
     else

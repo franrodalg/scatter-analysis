@@ -1,13 +1,14 @@
-function [norm_acc] = run_experiment(intervention, condition, feat_set)
+function [norm_acc] = run_experiment(...
+    intervention, condition, feat_set, filter_type)
 
     global OPTIONS;
     
-    show_experiment(intervention, condition, feat_set);
+    show_experiment(intervention, condition, feat_set, filter_type);
     fprintf('\n');
     
     display('Obtaining audio features...')
     [features, indices, objects] = get_features(...
-      intervention, condition, feat_set, OPTIONS);
+      intervention, condition, feat_set, filter_type, OPTIONS);
     display('Features obtained!');
     fprintf('\n');
     
@@ -28,7 +29,7 @@ function [norm_acc] = run_experiment(intervention, condition, feat_set)
     
     if(OPTIONS.save_pred_frame)
       save_predictions(...
-        pred_frame, intervention, condition, feat_set, 'frames');
+        pred_frame, intervention, condition, feat_set, 'frames', filter_type);
     end
     display('Predictions saved!');
     fprintf('\n');
@@ -48,7 +49,7 @@ function [norm_acc] = run_experiment(intervention, condition, feat_set)
     if(OPTIONS.save_foms)
       display('Saving FoM...');  
       save_fom(...
-          fom, intervention, condition, feat_set);
+          fom, intervention, condition, feat_set, filter_type);
       display('FoM saved!');
       fprintf('\n');
     end

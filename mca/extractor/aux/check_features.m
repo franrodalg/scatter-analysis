@@ -4,6 +4,6 @@ function [found] = check_features(feat_set, version)
         version = 'original';
     end
 
-    found = exist(get_features_path(feat_set, version),'file');    
+    found = exist(get_features_path(feat_set, version, filter_type),'file');    
 
 end
