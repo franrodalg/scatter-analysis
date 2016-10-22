@@ -33,13 +33,13 @@ fprintf('\n**********\n');
 
 if (any(ismember(interventions, 'f')))
   experiments = define_execution(...
-    interventions, conditions, feat_sets);
+    interventions, conditions, feat_sets, filter_types);
 else
   experiments = define_execution(...
-    interventions, conditions, feat_sets, filter_types);
+    interventions, conditions, feat_sets);
 end
 
-
+experiments
 %%
 
 fprintf('\n**********\n');

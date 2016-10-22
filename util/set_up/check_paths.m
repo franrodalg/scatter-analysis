@@ -30,7 +30,7 @@ end
 
 %% GTZAN filtered
 
-if(ismember('f', conditions))
+if(ismember('f', interventions))
   if isequal(gtzan_filt_path, '')
     error_path('GTZAN Filtered Recordings');
   elseif ~exist(gtzan_filt_path, 'dir')
@@ -86,7 +86,7 @@ end
 
 %% GTZAN filtered features
 
-if(ismember('f', conditions) && save_feats_filtered)
+if(ismember('f', interventions) && save_feats_filtered)
   if isequal(feats_filt_path, '')
     error_path('Filtered audio features');
   elseif ~exist(feats_filt_path, 'dir')
