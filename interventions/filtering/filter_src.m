@@ -6,7 +6,7 @@ end
 
 global PATHS;
 
-filtered_folder = [PATHS.gtzan_filt '/' filter_type];
+filtered_folder = [PATHS.gtzan_filt '/' filter_type '/'];
 dataset_folder = PATHS.gtzan;
 
 categories = dir(dataset_folder);
