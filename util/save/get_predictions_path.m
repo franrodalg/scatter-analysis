@@ -1,7 +1,7 @@
 function [ path ] = get_predictions_path(intervention, ...
     condition, feat_set, mode, filter_type)
 
-  if ((nargin > 4) && ~strcmp(filter_type, ''))
+  if ((nargin > 3) && ~strcmp(filter_type, ''))
     intervention = [intervention '_' filter_type];
   end
 
