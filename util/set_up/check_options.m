@@ -6,7 +6,7 @@ if (any(ismember(interventions, 'f')))
   if(~exist('filter_types') || isempty(filter_types))
     filter_types = {'bw'};
   else
-    filter_types_allowed = {'bw', 'fb'};
+    filter_types_allowed = {'bw', 'fb', 'fb_bw'};
     filter_types = check_option(...
       'Filter Types', filter_types, filter_types_allowed);
   end
