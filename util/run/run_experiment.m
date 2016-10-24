@@ -25,7 +25,8 @@ function [norm_acc] = run_experiment(...
     fprintf('\n');
     
     display('Saving predictions...');
-    save_predictions(pred, intervention, condition, feat_set, 'excerpts');
+    save_predictions(pred, intervention, condition, feat_set, ...
+      'excerpts', filter_type);
     
     if(OPTIONS.save_pred_frame)
       save_predictions(...
