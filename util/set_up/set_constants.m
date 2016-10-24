@@ -6,6 +6,7 @@ INTERVENTIONS.f = 'Filtering';
 global FILTER_TYPES;
 FILTER_TYPES.bw = 'Butterworth';
 FILTER_TYPES.fb = 'Filterbank';
+FILTER_TYPES.fb_bw = 'Filterbank like Butterworth';
 
 global CONDITIONS;
 CONDITIONS.r = 'Random Stratification';
