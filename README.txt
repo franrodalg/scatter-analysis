@@ -1,5 +1,5 @@
 Analysis of Scattering-Based MCA Systems
-Version 0.0.6
+Version 0.0.7
 October 2016
 
 Contact: Francisco Rodríguez-Algarra (f.rodriguezalgarra@qmul.ac.uk)
@@ -23,6 +23,10 @@ in Proc. 17th International Society of Music Information Retrieval Conference (I
 New York, NY, USA, Aug. 2016.
 
 * CHANGELOG
+
+Version 0.0.7:
+
+- Add new filter type: Filterbank resembling the original Butterworth filter reported in ISMIR
 
 Version 0.0.6:
 
