@@ -71,6 +71,8 @@ for ii=1:length(categories)
       y = filter_bw(x, fs);
     elseif(strcmp(filter_type, 'fb'))
       y = filter_fb(x, fs);
+    elseif(strcmp(filter_type, 'fb_bw'))
+      y = filter_fb_bw(x, fs);
     else
       error('Unknown filter type');
     end

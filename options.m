@@ -9,7 +9,7 @@ interventions = {'p', 'c', 'f'};
 %% Filter types in Filtering Interventions
 % 'bw' for Butterworth (used in ISMIR 2016)
 % 'fb' for IIR Filterbank
-% e.g., filter_types = {'bw', 'fb'};
+% e.g., filter_types = {'bw', 'fb', 'fb_bw'};
 
 filter_types = {'bw'};
 
