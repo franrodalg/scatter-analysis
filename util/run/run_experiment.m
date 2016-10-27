@@ -3,6 +3,10 @@ function [norm_acc] = run_experiment(...
 
     global OPTIONS;
     
+    if nargin < 4
+      filter_type = '';
+    end
+
     show_experiment(intervention, condition, feat_set, filter_type);
     fprintf('\n');
     
