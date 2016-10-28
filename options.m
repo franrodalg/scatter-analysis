@@ -58,6 +58,10 @@ save_pred_frame = 1;
 
 save_foms = 1;
 
+%% Save accuracy summaries
+
+save_summary = 1;
+
 %% Reuse previously computed audio features
 
 reuse_feats = 1;
