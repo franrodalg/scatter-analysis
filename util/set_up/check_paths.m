@@ -218,3 +218,22 @@ if(save_foms)
     display('Computed FoMs folder found.');
   end
 end
+
+%% Summary
+
+if(save_summary)
+  if isequal(summary_path, '')
+    error_path('Summary of results');
+  elseif ~exist(summary_path, 'dir')
+    [s, mess, messid] = mkdir(summary_path);
+    if(s)
+      display('Summary of results folder successfully created.');
+    else
+      error(['Summary of results folder could not be created ' ...
+          'in the requested location. ' ...
+          'Please select an available one and edit paths.m.'])
+    end
+  else
+    display('Summary of results folder found.');
+  end
+end

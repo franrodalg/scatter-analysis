@@ -1,5 +1,5 @@
 Analysis of Scattering-Based MCA Systems
-Version 0.0.7
+Version 0.0.8
 October 2016
 
 Contact: Francisco Rodríguez-Algarra (f.rodriguezalgarra@qmul.ac.uk)
@@ -24,14 +24,21 @@ New York, NY, USA, Aug. 2016.
 
 * CHANGELOG
 
+Version 0.0.8
+
+- Fixed bugs:
+  - Crash when no filtering intervention is requested
+- Allow save final summary of results
+
 Version 0.0.7:
 
-- Add new filter type: Filterbank resembling the original Butterworth filter reported in ISMIR
+- Add new filter type: Filterbank resembling the original
+    Butterworth filter reported in ISMIR
 
 Version 0.0.6:
 
-- Allow execution of multiple filtering interventions using different filters
-  in the same run
+- Allow execution of multiple filtering interventions using
+    different filters in the same run
 
 Version 0.0.5:
 
@@ -41,13 +48,13 @@ Version 0.0.5:
 Version 0.0.4:
 
 - Fixed bugs:
- - Literal option never being used
+  - Literal option never being used
 
 Version 0.0.3
 
 - Fixed bugs:
- - Automatic creation of folders
- - Selection of filter type
+  - Automatic creation of folders
+  - Selection of filter type
 
 Version 0.0.2
 

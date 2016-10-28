@@ -7,8 +7,9 @@ function [norm_acc] = run_experiment(...
       filter_type = '';
     end
 
-    show_experiment(intervention, condition, feat_set, filter_type);
-    fprintf('\n');
+    show_experiment(...
+        get_experiment(intervention, condition, feat_set, filter_type));
+    fprintf('\n\n');
     
     display('Obtaining audio features...')
     [features, indices, objects] = get_features(...
@@ -34,7 +35,8 @@ function [norm_acc] = run_experiment(...
     
     if(OPTIONS.save_pred_frame)
       save_predictions(...
-        pred_frame, intervention, condition, feat_set, 'frames', filter_type);
+        pred_frame, intervention, condition, feat_set, ...
+        'frames', filter_type);
     end
     display('Predictions saved!');
     fprintf('\n');

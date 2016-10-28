@@ -30,3 +30,7 @@ end
 if exist('foms_path', 'var')
   PATHS.foms = foms_path;
 end
+
+if exist('summary_path', 'var')
+  PATHS.summary = summary_path;
+end

@@ -27,6 +27,6 @@ function [] = start_execution(experiments)
     fprintf('SUMMARY OF RESULTS');
     fprintf('\n**********\n');
     
-    show_summary(experiments, norm_accs);
+    summarise(experiments, norm_accs);
     
 end

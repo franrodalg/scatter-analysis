@@ -88,3 +88,10 @@ pred_frames_path = '';
 % If the folder does not exist, the script will create it.
 
 foms_path = '';
+
+% Folder to store summary of results,
+% e.g., summary_path = [pwd, '/../results/summaries'];
+% Only mandatory if 'summary_foms' option is enabled
+% If the folder does not exist, the script will create it.
+
+summary_path = '';
